@@ -1,0 +1,82 @@
+body {
+	background-image: url(/week3/omikuji/images/p0526_m.png);
+	animation-name: fade-in;
+	animation-duration: 3s;
+	animation-timing-function: ease-in;
+	animation-delay: 0s;
+	overflow: hidden;
+}
+
+.container {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 1fr 43.75em 1fr;
+	grid-column-gap: 0;
+}
+
+.content {
+	grid-column: 2;
+	display: grid;
+	grid-template-rows: 3.125em 1fr 5em;
+	font-family: serif;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0
+	}
+	100% {
+		opacity: 1
+	}
+}
+
+.result {
+	grid-row: 1;
+	text-align: center;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.result>h1 {
+	margin: auto;
+}
+
+.description {
+	grid-row: 2;
+	position: relative;
+	margin: 2.5em;
+}
+
+.description-style {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	height: 100%;
+	transform: translate(-50%, -100%);
+	writing-mode: vertical-rl;
+	overflow-wrap: break-word;
+}
+
+.description-style p {
+	margin: 0.5em;
+	font-size: 1.5em;
+}
+
+.content-link {
+	grid-row: 3;
+	text-align: center;
+	margin: auto;
+}
+
+.content-link a {
+	color: rgb(249, 249, 249);
+	background-color: rgb(192, 192, 192);
+	padding: 0.625em;
+	text-decoration: none;
+	margin: 0 0.625em;
+	border-radius: 0.375em;
+}
+
+.content-link a:hover {
+	color: #0090aa;
+}

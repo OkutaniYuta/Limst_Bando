@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8" />
+<title>Game Of EndlessOmikuji Result</title>
+<link rel="stylesheet" th:href="@{/week4/omikuji/css/result.css}" />
+</head>
+<body>
+	<div class="container">
+		<div class="content">
+			<div class="result">
+				<span th:text="${fortuneMessage}"></span>
+			</div>
+			<div class="description">
+				<div class="description-style">
+					<p th:text="${fortuneComment}"></p>
+				</div>
+			</div>
+			<div class="content-link">
+				<a th:href="@{'/endlessOmikuji/'}">戻る</a>
+				<a th:href="@{'/endlessOmikuji/result'}">もう一度占う</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

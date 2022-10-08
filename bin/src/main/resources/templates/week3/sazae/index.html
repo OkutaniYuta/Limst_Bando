@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sazae Janken</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/earlyaccess/hannari.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../static/week3/sazae/css/index.css" th:href="@{/week3/sazae/css/index.css}" />
+  </head>
+  <body>
+    <div class="description">
+      <h1 class="description__text">えらべ</h1>
+    </div>
+    <div class="hand">
+      <div class="goo">
+        <a href="./jankenResult.html?hand=goo" th:href="@{/sazae/janken(hand=${'goo'})}" class="goo__link">
+          <img id="goo" class="goo__image" src="../../../static/week3/sazae/image/goo.png" alt="" th:src="@{/week3/sazae/image/goo.png}"/>
+        </a>
+      </div>
+      <div class="choki">
+        <a href="./jankenResult.html?hand=choki"  th:href="@{/sazae/janken(hand=${'choki'})}" class="choki__link">
+          <img id="choki" class="choki__image" src="../../../static/week3/sazae/image/choki.png" alt="" th:src="@{/week3/sazae/image/choki.png}"/>
+        </a>
+      </div>
+      <div class="per">
+        <a href="./jankenResult.html?hand=per" th:href="@{/sazae/janken(hand=${'per'})}" class="per__link">
+          <img id="per" class="per__image" src="../../../static/week3/sazae/image/per.png" alt="" th:src="@{/week3/sazae/image/per.png}"/>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

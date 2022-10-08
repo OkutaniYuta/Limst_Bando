@@ -1,0 +1,51 @@
+.background{
+  background: #e9f0f7;
+  height: 300px;
+}
+
+.nabeatu-img{
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  text-align: center;
+}
+
+#containter {
+  text-align: center;
+}
+
+h1 {
+  color: #55acee;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 72px;
+  margin-top: 50px;
+}
+
+p{
+  color: #55acee;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+h3{
+  color: #55acee;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 50px;
+  margin-top: 50px;
+}
+
+.number {
+  text-align: center;
+  border: solid;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.text-danger {
+	color : #FF0000;
+}
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>世○のさらあつ</title>
+<link rel="stylesheet" th:href="@{/week3/nabeatu/css/nabeatu_number.css}" />
+</head>
+<body>
+	<div class="base-area">
+		<div th:object="${nabeatuForm}">
+			<div class="img-position">
+				<div id="containter" class="background">
+					<img class="nabeatu-img"
+						th:src="@{/week4/nabeatu/img/nabeatu_number.png}">
+					<p>あなたの入力した数字は</p>
+					<h3 th:text="*{number} + '!!!'"></h3>
+				</div>
+			</div>
+			<br>
+		</div>
+	</div>
+</body>
+</html>

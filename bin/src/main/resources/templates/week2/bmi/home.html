@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf">
+<head>
+	<meta charset="UTF-8"></meta>
+	<title>BMI計算</title>
+	<link rel="stylesheet" href="/week2/bmi/css/home.css">
+</head>
+<body>
+	<h1 class="page-title">BMI計算</h1>
+	<div class="form">
+		<form method="post" th:action="@{/bmi/result}" th:object="${bmiFormModel}">
+			<label>身長( 例.身長170cmの場合:1.7 )</label><br />
+			<input type="text" placeholder="数値で入力してください" th:field="*{height}"/><br/>
+			<span th:if="${#fields.hasErrors('height')}" th:errors="*{height}" class="text-danger">error!</span>
+			<br/>
+			<label>体重( 例.体重60kgの場合:60.0 )</label><br />
+			<input type="text" placeholder="数値で入力してください" th:field="*{weight}"/><br/>
+			<span th:if="${#fields.hasErrors('weight')}" th:errors="*{weight}" class="text-danger">error!</span>
+			<br/>
+			<button type="submit">計算</button>
+		</form>
+		<p th:if="${validationError}" th:text="${validationError}">validation error</p>
+	</div>
+</body>
+</html>

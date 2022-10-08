@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8" />
+<title>数あてげぇむ</title>
+<link rel="stylesheet" th:href="@{/week10/numeron/css/retry.css}" />
+</head>
+<body>
+	<div class="container">
+		<h1 class="title">数あてげぇむ</h1>
+		<div class="number">
+			<form method="post" action="/numeron/result"
+				th:object="${numeronModel}" class="attack">
+				<label>さんけたのすぅちを入力</label><br /> <input type="text"
+					placeholder="数値で入力してください" th:field="*{attackNumber}" /><br /> <span
+					th:if="${#fields.hasErrors('attackNumber')}"
+					th:errors="*{attackNumber}" class="text-danger">error!</span> <br />
+				<button type="submit">どーん</button>
+			</form>
+					<div class="description">
+			<h1>はずれ<br/>ざんねんでした</h1>
+			<h3>
+			<span th:text="ばしょ〇・すぅち〇の数：+${hitCount}"></span><br />
+			<span th:text="ばしょX・すぅち〇の数：+${blowCount}"></span>
+			</h3>
+
+		</div>
+		</div>
+
+		<p th:if="${validationError}" th:text="${validationError}">validation
+			error</p>
+	</div>
+</body>
+</html>

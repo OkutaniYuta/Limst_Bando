@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Calc CompoundInterest Ex Result</title>
+  <link rel="stylesheet" th:href="@{/week7/compoundInterest_ex/css/result.css}" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="content-header">
+      <h1>複利計算EX_結果画面</h1>
+    </div>
+    <div class="content-main">
+      <div class="result">
+        <h2 th:text="${overedYearsMsg}"></h2>
+      </div>
+      <table class="table-fill">
+        <thead>
+          <tr>
+            <th>years</th>
+            <th>price</th>
+          </tr>
+        </thead>
+        <tbody class="table-hover">
+          <tr th:each="price, state:${resultPriceList}">
+            <td th:text="${state.count} + '年目'">years</td>
+            <td th:text="${#numbers.formatDecimal(price,1,2,'POINT')} + '万円'">price</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="content-link">
+      <a th:href="@{'/compoundInterestEx/'}">Goto Home</a>
+    </div>
+  </div>
+</body>
+</html>

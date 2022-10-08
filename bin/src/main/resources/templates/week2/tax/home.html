@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf">
+<head>
+	<meta charset="UTF-8">
+	<title>税込計算</title>
+	<link rel="stylesheet" href="/week2/tax/css/home.css">
+</head>
+<body>
+	<h1 class="page-title">税込計算</h1>
+	<div class="form">
+		<form method="post" action="/tax/result" th:object="${taxFormModel}">
+			<label>税抜き金額を入力してください</label><br />
+			<br />
+			<input type="text" placeholder="数値で入力してください" th:field="*{priceWithoutTax}"/><br />
+			<span th:if="${#fields.hasErrors('priceWithoutTax')}" th:errors="*{priceWithoutTax}" class="text-danger">error!</span>
+			<br />
+			<button type="submit">計算</button>
+		</form>
+	</div>
+</body>
+</html>

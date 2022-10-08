@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+body {
+	background-image: url('/week6/calculator/images/calculator.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.page-title {
+	text-align : center;
+}
+
+.overview {
+	text-align : center;
+	background-color : #CCFFFF;
+	width : 30% ;
+	margin-top : 0;
+	margin-right : auto;
+	margin-bottom : 1%;
+	margin-left : auto;
+	border : ridge;
+
+}
+
+.form {
+	text-align : center;
+	border : solid;
+	width : 50% ;
+	margin : 0 auto;
+	background-color : #FFFFFF;
+}
+
+.text-danger {
+	color : #FF0000;
+}
+
+.calc-type {
+	display : inline-block;
+}
+
+#submit {
+	width : 60%;
+}
+
+input#submit:hover {
+	border : outset;
+}
