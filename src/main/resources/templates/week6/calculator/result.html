@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf">
+<head>
+	<meta charset="UTF-8"></meta>
+	<title>計算結果</title>
+	<link rel="stylesheet" href="/week6/calculator/css/result.css">
+</head>
+<body>
+	<h1 class="page-title">計算結果</h1>
+
+	<div class="result">
+		<h2>一つ目の数</h2>
+		<span th:text="${firstNum}"/></span><br/>
+		<br/>
+		<h2>二つ目の数</h2>
+		<span th:text="${secondNum}"/></span><br/>
+		<br/>
+		<h2>計算方法</h2>
+		<span th:text="${physicalCalcType}"/></span><br/>
+		<br/>
+		<h2>計算結果</h2>
+		<p th:text="${#numbers.formatDecimal(result, 0, 2)}" id="calcResult"/><br/>
+	</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<title>MyProfile</title>
+<link rel="stylesheet" th:href="@{/week2/introduce/css/index.css}" />
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Introduce</h1>
+		<div class="content">
+			<img th:src="@{/week2/introduce/images/myphoto.png}" alt="" />
+			<h2 th:text="${introduceName}"></h2>
+			<h4 th:text="${introduceComment}"></h4>
+			<a href=""><span class="fas fa-camera"></span> 404</a>
+			<a href=""><span class="far fa-heart"></span> 200</a>
+			<a href=""><span class="far fa-user"></span> 500</a>
+		</div>
+	</div>
+</body>
+</html>

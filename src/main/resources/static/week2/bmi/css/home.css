@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+body {
+	background-image: url('/week2/bmi/images/bmi_background.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.page-title {
+	text-align : center;
+}
+
+.form {
+	text-align : center;
+	border : solid;
+	width : 50% ;
+	margin : 0 auto;
+	background-color : #FFFFFF;
+}
+
+.text-danger {
+	color : #FF0000;
+}

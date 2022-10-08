@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf">
+<head>
+	<meta charset="UTF-8"></meta>
+	<title>BMI計算結果</title>
+	<link rel="stylesheet" href="/week2/bmi/css/result.css">
+</head>
+<body>
+	<h1 class="page-title">BMI計算結果</h1>
+
+	<div class="result">
+		<img th:src="${imgUrl}" class="bmi-image">
+		<br/>
+		<h2>身長</h2>
+		<span th:text="${height}"/></span><span>m</span><br/>
+		<br/>
+		<h2>体重</h2>
+		<span th:text="${weight}"/></span><span>kg</span><br/>
+		<br/>
+		<h2>BMI</h2>
+		<p th:text="${#numbers.formatDecimal(bmiResult, 0, 2)}" id="bmi"/><br/>
+		<h2>肥満度</h2>
+		<p th:text="${obesityResult}" id="obesity"/><br/>
+	</div>
+</body>
+</html>

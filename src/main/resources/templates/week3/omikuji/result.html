@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8" />
+<title>Game Of Omikuji Result</title>
+<link rel="stylesheet" th:href="@{/week3/omikuji/css/result.css}" />
+</head>
+<body>
+	<div class="container">
+		<div class="content">
+			<div class="result">
+				<span th:text="${fortuneMessage}"></span>
+			</div>
+			<div class="description">
+				<div class="description-style">
+					<p th:text="${fortuneComment}"></p>
+				</div>
+			</div>
+			<div class="content-link">
+				<a th:href="@{'/omikuji/'}">戻る</a>
+				<a th:href="@{'/omikuji/result'}">もう一度占う</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

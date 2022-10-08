@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8" />
+<title>数あてげぇむ</title>
+<link rel="stylesheet" th:href="@{/week10/numeron/css/result.css}" />
+</head>
+<body>
+	<div class="container">
+		<h1 class="title">数あてげぇむ</h1>
+		<div class="result">
+			<h1 class="result-message">おめでとぅ<br /> 
+				せぃかいは
+				<th:block th:each="number:${answerList}">
+					<span th:text="${number}"></span>
+				</th:block>だよ～ん♬<br />
+				<span th:text="くりあまでに+${turn}+たぁんかかりました"></span><br />
+			</h1>
+
+			<div class="description">
+				<div class="rank">
+					<h3 class="rank-rank" th:text="RANK_ + ${rank}"></h3>
+					<h3 class="rank-message" th:text="${message}"></h3>
+				</div>
+				
+				<div class="home">
+					<br /><a th:href="@{'/numeron/retry'}">りとらい</a>
+				</div>
+			</div>
+
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Calc CompoundInterest Ex Home</title>
+  <link rel="stylesheet" th:href="@{/week7/compoundInterest_ex/css/index.css}" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="content-header">
+        <h1>複利計算EX</h1>
+      </div>
+      <div class="content-main">
+        <form method="post" th:action="@{/compoundInterestEx/result}" th:object="${calcExForm}">
+          <div class="form-box">
+            <label>元金( 例.最初に持っているお金:300万円 ): </label>
+            <input type="text" placeholder="数値で入力してください" th:field="*{principal}">万円
+            <p th:if="${#fields.hasErrors('principal')}" th:errors="*{principal}" class="text-danger">error!</p>
+          </div>
+          <div class="form-box">
+            <label>金利( 例.1年あたりの利率:1.5% ): </label>
+            <input type="text" placeholder="数値で入力してください" th:field="*{rate}" />％
+            <p th:if="${#fields.hasErrors('rate')}" th:errors="*{rate}" class="text-danger">error!</p>
+          </div>
+          <div class="form-box">
+            <label>経過年数( 例.金利を計算する年数:10年 ): </label>
+            <input type="text" placeholder="数値で入力してください" th:field="*{years}" />年
+            <p th:if="${#fields.hasErrors('years')}" th:errors="*{years}" class="text-danger">error!</p>
+          </div>
+          <div class="form-box">
+            <label>目標金額: </label>
+            <input type="text" placeholder="数値で入力してください" th:field="*{targetPrice}" />万円
+            <p th:if="${#fields.hasErrors('targetPrice')}" th:errors="*{targetPrice}" class="text-danger">error!</p>
+          </div>
+          <button class="content-btn" type="submit">計算</button>
+        </form>
+      </div>
+    </div>
+    </div>
+</body>
+</html>

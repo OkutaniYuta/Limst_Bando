@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+body {
+	background-image: url(/week5/compoundInterest/images/background.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0;
+}
+
+.title {
+	text-align : center;
+	color : rgb(255,255,255);
+}
+
+.result {
+	text-align : center;
+	border : solid;
+	max-width: 1000px;
+	margin : 0 auto;
+	color : red;
+	background-color : rgba(255,255,255,0.8);
+}
+
+.message {
+	text-align : center;
+	border : solid;
+	width : 55% ;
+	margin : 100px auto auto auto;
+	background-color : rgba(255,255,255,1);
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8" />
+<title>Game Of EndlessOmikuji Home</title>
+<link rel="stylesheet" th:href="@{/week4/omikuji/css/index.css}" />
+</head>
+<body>
+	<div class="container">
+		<div class="content">
+			<div class="content-header">
+				<h1>無限おみくじ</h1>
+			</div>
+			<img class="content-img" th:src="@{/week4/omikuji/images/omikuji_main.png}" alt="">
+			<p class="content-text">あなたの運勢を<strong> 凶 </strong>が出るまで無限に占い続けてやりましょう・・・</p>
+			<div class="content-link">
+				<a th:href="@{'/endlessOmikuji/result'}">怖いけど占う</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+html, body {
+	font-family: Times New Roman;
+	overflow: hidden;
+	height: 100vh;
+	background-image: url('/week2/introduce/images/bg-img.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: rgba(255, 255, 255, 0.5);
+	background-blend-mode: lighten;
+}
+
+.container {
+	text-align: center;
+}
+
+.content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	margin: auto;
+}
+
+.content img {
+	border-radius: 100%;
+	box-shadow: 0 0.3em 0.3em black;
+	height: 12.5em;
+	width: 12.5em;
+	object-fit: cover;
+}

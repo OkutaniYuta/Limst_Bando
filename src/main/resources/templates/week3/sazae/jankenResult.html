@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/earlyaccess/hannari.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../static/week3/sazae/css/jankenResult.css" th:href="@{'/week3/sazae/css/jankenResult.css'}" />
+  </head>
+  <body>
+    <div class="opponent-hand">
+      <img src="../../../static/week3/sazae/image/goo.png" alt="" class="opponent-hand__image" th:src="@{'/week3/sazae/image/' + ${opponentHand} + '.png'}"/>
+    </div>
+    <div class="my-hand">
+      <img src="../../../static/week3/sazae/image/per.png" alt="" class="my-hand__image" th:src="@{'/week3/sazae/image/' + ${myHand} + '.png'}"/>
+    </div>
+    <div class="result" th:switch="${result}">
+      <p th:case="win" class="win">かち</p>
+      <!--/*/
+      <p th:case="lose" class="lose">まけ</p>
+      <p th:case="draw " class="draw">あいこ</p>
+      /*/-->
+    </div>
+    <div class="retry">
+      <a href="./index.html" th:href="@{'/sazae/'}" class="retry__btn">
+        <i class="fa fa-home"></i>
+      </a>
+    </div>
+  </body>
+</html>

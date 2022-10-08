@@ -1,0 +1,92 @@
+html,
+body {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  background-color: #aac369;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+}
+
+.opponent-hand__image {
+  position: absolute;
+  left: calc(50vw - 150px);
+  top: -100vh;
+  transform: rotate(180deg);
+  animation-name: fadeInFromTop;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+.my-hand__image {
+  position: absolute;
+  left: calc(50vw - 150px);
+  top: 200vh;
+  animation-name: fadeInFromBottom;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInFromTop {
+  from {
+    top: -100vh;
+  }
+
+  to {
+    top: calc(50vh - 500px);
+  }
+}
+
+@keyframes fadeInFromBottom {
+  from {
+    top: 200vh;
+  }
+
+  to {
+    top: 50vh;
+  }
+}
+
+.result {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 5em;
+  font-weight: bold;
+  opacity: 0;
+  -webkit-text-stroke: 3px #000000;
+  animation-name: textFadeIn;
+  animation-duration: 1s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+.win {
+  color: red;
+}
+
+.lose {
+  color: blue;
+}
+
+@keyframes textFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100;
+  }
+}
+
+.retry {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.retry__btn {
+  color: #000000;
+  font-size: 10em;
+}

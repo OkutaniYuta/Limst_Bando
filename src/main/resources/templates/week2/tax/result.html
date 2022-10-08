@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf">
+<head>
+	<meta charset="UTF-8">
+	<title>税込計算結果</title>
+	<link rel="stylesheet" href="/week2/tax/css/result.css">
+</head>
+<body>
+	<h1 class="page-title">税込計算結果</h1>
+
+	<div class="result">
+		<h2>税抜き金額</h2>
+		<span th:text="${priceWithoutTax}"/></span><span>円</span><br/>
+		<br/>
+		<h2>税率</h2>
+		<span th:text="${taxRate * 100}"/></span><span>%</span><br/>
+		<br/>
+		<h2>税込金額</h2>
+		<span th:text="${#numbers.formatDecimal(taxResult, 0, 0)}" id="taxResult"/></span><span>円</span><br/>
+		<br/>
+	</div>
+</body>
+</html>

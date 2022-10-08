@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+body {
+	background-image: url('/week6/calculator/images/calculator.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.page-title {
+	text-align : center;
+}
+
+.result {
+	text-align : center;
+	border : double;
+	width : 50%;
+	margin : 0 auto;
+	background-color : #FFFFFF;
+}
+
+#calcResult {
+	color : #FF0000;
+	font-size : 200%;
+}

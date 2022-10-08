@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>世○のさらあつ</title>
+<link rel="stylesheet" th:href="@{/week4/nabeatu/css/nabeatu_number.css}" />
+</head>
+<body>
+  <div id="containter" class="background">
+    <h1>Let's input your number!!</h1>
+    <form th:action="@{/nabeatu/result}" th:object="${nabeatuForm}" method="post">
+      <input class="number" th:field="*{number}" type="text" name="q" autocomplete="off" maxlength="60"><br/>
+      <span th:if="${#fields.hasErrors('number')}" th:errors="*{number}" class="text-danger">error!</span>
+       <p>
+         <button class="centers">
+           Push here!
+         </button>
+       </p>
+    </form>
+    <p th:if="${validationError}" th:text="${validationError}">validation error</p>
+  </div>
+</body>
+</html>
