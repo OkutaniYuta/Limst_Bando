@@ -12,7 +12,9 @@ public class IntroduceService {
      * </pre>
      * @return name 自分の名前
      */
+	String name = "坂東鋭亮";
 	public String getName() {
+		return name;
 
 	}
 	
@@ -24,7 +26,9 @@ public class IntroduceService {
      * </pre>
      * @return comment 自己紹介文
      */
+	String comment = "はじめまして、よろしくお願いします。";
 	public String getComment() {
+		return comment;
 
 	}
 }
