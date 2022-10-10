@@ -21,6 +21,8 @@ public class BmiService {
     public double getBmiCalcResult(double height, double weight) {
 
         // BMI計算
+    	double bmi = weight / (height * height);
+    	return bmi;
  
     }
 
