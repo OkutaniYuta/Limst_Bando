@@ -1,7 +1,7 @@
 package com.example.demo.week3.service;
 
 import org.springframework.stereotype.Service;
-
+import java.util.Random;
 @Service
 public class SazaeService {
     /**
@@ -21,7 +21,41 @@ public class SazaeService {
      * @return result win,lose,draw のいずれかの文字列
      * @throws IllegalArgumentException myHand または opponentHand が goo,choki,per のいずれかでない場合
      */
+	String myHand;
+	String opponentHand;
     public String janken(String myHand, String opponentHand) {
+    	   	
+    	String result = " ";
+    	if (myHand.equals("goo") && opponentHand.equals("goo")) {
+    		result = "draw";
+    		return result;
+    	} else if (myHand.equals("goo") && opponentHand.contentEquals("choki")) {
+    		result = "win";
+    		return result;
+    	} else if (myHand.equals("goo") && opponentHand.equals("per")) {
+    		result = "lose";
+    		return result;
+    	} else if (myHand.equals("choki") && opponentHand.equals("goo")) {
+    		result = "lose";
+    		return result;
+    	} else if (myHand.equals("choki") && opponentHand.equals("choki")) {
+    		result = "draw";
+    		return result;
+    	} else if (myHand.equals("choki") && opponentHand.equals("per")) {
+    		result = "win";
+    		return result;
+    	} else if (myHand.equals("per") && opponentHand.equals("goo")) {
+    		result = "win";
+    		return result;
+    	} else if (myHand.equals("per") && opponentHand.equals("choki")) {
+    		result = "lose";
+    		return result;
+    	} else if (myHand.equals("per") && opponentHand.equals("per")) {
+    		result = "draw";
+    		return result;
+    	} 
+    	
+    	return result;
 
     }
 }
