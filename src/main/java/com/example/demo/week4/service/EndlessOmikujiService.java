@@ -19,8 +19,25 @@ public class EndlessOmikujiService {
      * @return result おみくじの結果
      */
     public String getResult() {
-
+    	Random random = new Random();   	
+    	String result = " ";
+    	while (result != "凶") {
+    		int n = random.nextInt(4);
+        	if (n == 0) {
+        		result = "大吉";
+        	} else if (n == 1) {
+        		result = "中吉";
+        	} else if (n ==2) {
+        		result = "吉";
+        	} else {
+        		result = "凶";
+        		break;
+        	}
+    	}
+    return result;
     }
+    
+    
 
     /**
      * <pre>
@@ -34,6 +51,21 @@ public class EndlessOmikujiService {
      * @return resultComment 無限おみくじの仕様に沿ったコメント
      */
     public String getResultComment() {
-
+    	String result = " ";
+    	String resultComment = "";
+    	if (result.equals("大吉")) {
+    		resultComment = "大吉です。おめでとうございます！";
+    		return resultComment;
+    	} else if (result == "中吉") {
+    		resultComment = "中吉です。よかったです。";
+    		return resultComment;
+    	} else if (result == "吉") {
+    		resultComment = "吉です。まあまあです。";
+    		return resultComment;
+    	} else {
+    		resultComment = "凶です。残念です。";
+    		return resultComment;
+    	}
     }
 }
+ 
