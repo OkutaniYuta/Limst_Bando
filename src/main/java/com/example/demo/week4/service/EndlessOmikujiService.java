@@ -20,8 +20,8 @@ public class EndlessOmikujiService {
      */
     public String getResult() {
     	Random random = new Random();   	
-    	String result = " ";
-    	while (result != "凶") {
+    	String result = "";
+    	while (true) {
     		int n = random.nextInt(4);
         	if (n == 0) {
         		result = "大吉";
@@ -56,10 +56,10 @@ public class EndlessOmikujiService {
     	if (result.equals("大吉")) {
     		resultComment = "大吉です。おめでとうございます！";
     		return resultComment;
-    	} else if (result == "中吉") {
+    	} else if (result.equals("中吉")) {
     		resultComment = "中吉です。よかったです。";
     		return resultComment;
-    	} else if (result == "吉") {
+    	} else if (result.equals("吉")) {
     		resultComment = "吉です。まあまあです。";
     		return resultComment;
     	} else {
