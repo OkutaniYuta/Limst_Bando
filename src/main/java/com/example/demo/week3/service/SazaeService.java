@@ -23,8 +23,7 @@ public class SazaeService {
      */
 	String myHand;
 	String opponentHand;
-    public String janken(String myHand, String opponentHand) {
-    	   	
+    public String janken(String myHand, String opponentHand) {	   	
     	String result = " ";
     	if (myHand.equals("goo") && opponentHand.equals("goo")) {
     		result = "draw";
@@ -54,8 +53,6 @@ public class SazaeService {
     		result = "draw";
     		return result;
     	} 
-    	
-    	return result;
-
+    	return "result";
     }
 }
