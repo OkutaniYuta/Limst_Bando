@@ -44,7 +44,7 @@ public class NabeatuService {
      */
     public boolean isAhoNumber(int totalNum) {
     	boolean flg;  		
-    		if (totalNum % 3 == 0 || totalNum % 10 == 3 || totalNum % 10 == 3 || totalNum % 100 == 3 || totalNum % 1000 == 3) {
+    		if (totalNum % 3 == 0 || totalNum % 10 == 3) {
     			flg = true;
     		}  else {
     			flg = false;
