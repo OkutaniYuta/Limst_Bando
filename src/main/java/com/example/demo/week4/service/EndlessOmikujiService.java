@@ -35,9 +35,7 @@ public class EndlessOmikujiService {
         	}
     	}
     return result;
-    }
-    
-    
+    }   
 
     /**
      * <pre>
