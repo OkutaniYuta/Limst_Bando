@@ -21,6 +21,13 @@ public class CompoundInterestService {
 	
 	public double getResult(int principal,double rate,int years) {
 
+		//double result = principal;
+		double Rate = Math.pow(1 + rate / 100, years);
+		double result = (double)(principal * Rate);
+			//result = principal;
+			return result;
+		
 	}
-
 }
+
+
