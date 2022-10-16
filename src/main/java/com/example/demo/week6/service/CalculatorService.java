@@ -1,5 +1,7 @@
 package com.example.demo.week6.service;
 
+
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import org.springframework.stereotype.Service;
@@ -17,8 +19,9 @@ public class CalculatorService {
      * </pre>
      *  @return calcTypeNameArray 演算子の配列
      */
-	public String[] getCalcTypeNameArray() {
-
+	public String[] getCalcTypeNameArray() {	
+		String[] calcTypeNameArray = {"足し算", "引き算", "掛け算", "割り算"};
+		return calcTypeNameArray;
 	}
 
     /**
@@ -36,8 +39,17 @@ public class CalculatorService {
      * </pre>
      *  @return calcTypes 演算子選択肢
      */
+	String calcTypes;
+	
+	
 	public Map<String, String> getCalcTypes(){
-
+		
+		Map<String, String> calcTypes = new HashMap<>();
+		calcTypes.put("add", "+");
+		calcTypes.put("sub", "-");
+		calcTypes.put("mul", "×");
+		calcTypes.put("div", "÷");
+		return calcTypes;
 	}
 
     /**
@@ -51,12 +63,23 @@ public class CalculatorService {
      *  @param calcType 画面で選択された計算方法に対応するgetCalcTypesのキー(英名)
      *  @return pysicalCalcType 選択演算子の和名
      */
+	
 	public String convertPysicalCalcType(String calcType) {
-
+		String pysicalCalcType = null;
 		//calcTypeNameArrayで宣言した、各演算子のインデックスを定義(定数)
+		String[] calcTypeNameArray = {"足し算", "引き算", "掛け算", "割り算"};
 		
 		//pysicalCalcTypeの取得処理
-
+		if (calcType.equals("add")) {
+			pysicalCalcType = calcTypeNameArray[0];			
+		} else if (calcType.equals("sub")) {			
+			pysicalCalcType = calcTypeNameArray[1];
+		} else if (calcType.equals("mul")) {			
+			pysicalCalcType = calcTypeNameArray[2];
+		} else if (calcType.equals("div")) {	
+			pysicalCalcType = calcTypeNameArray[3];
+		}
+		return pysicalCalcType;
 	}
 
     /**
@@ -71,8 +94,24 @@ public class CalculatorService {
      *  @param secondNum 2つ目に入力した数字
      *  @return result 計算結果
      */
+	
 	public double calculate(String calcType,double firstNum,double secondNum) {
-
+		
+		double result = 0;
+		if (calcType.equals("add")) {
+			result = add(firstNum, secondNum);
+			return result;
+		} else if (calcType.equals("sub"))  {
+			result = sub(firstNum, secondNum);
+			return result;
+		} else if (calcType.equals("mul"))  {
+			result = mul(firstNum, secondNum);	
+			return result;
+		} else if (calcType.equals("div"))  {
+			result = div(firstNum, secondNum);	
+			return result;
+		}		
+		return result;
 	}
     
 	/**
@@ -86,9 +125,11 @@ public class CalculatorService {
      *  @return result 計算結果
      */
 	public double add(double firstNum , double secondNum) {
-
-		// 結果格納用変数
-
+		
+		// 結果格納用変数　けっかかくのうようへんすう
+		double result = firstNum + secondNum;
+		return result;
+		
 	}
 
 	/**
@@ -104,6 +145,8 @@ public class CalculatorService {
 	public double sub(double firstNum , double secondNum) {
 
 		// 結果格納用変数
+		double result = firstNum - secondNum;
+		return result;
 
 	}
 
@@ -120,6 +163,8 @@ public class CalculatorService {
 	public double mul(double firstNum , double secondNum) {
 
 		// 結果格納用変数
+		double result = firstNum * secondNum;
+		return result;
 
 	}
 
@@ -136,6 +181,8 @@ public class CalculatorService {
 	public double div(double firstNum , double secondNum) {
 
 		// 結果格納用変数
+		double result = firstNum / secondNum;
+		return result;
 
 	}
 }
