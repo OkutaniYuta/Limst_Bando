@@ -124,12 +124,10 @@ public class CalculatorService {
      *  @param secondNum 2つ目に入力した数字
      *  @return result 計算結果
      */
-	public double add(double firstNum , double secondNum) {
-		
+	public double add(double firstNum , double secondNum) {	
 		// 結果格納用変数　けっかかくのうようへんすう
 		double result = firstNum + secondNum;
-		return result;
-		
+		return result;	
 	}
 
 	/**
@@ -143,11 +141,9 @@ public class CalculatorService {
      *  @return result 計算結果
      */
 	public double sub(double firstNum , double secondNum) {
-
 		// 結果格納用変数
 		double result = firstNum - secondNum;
 		return result;
-
 	}
 
 	/**
@@ -161,11 +157,9 @@ public class CalculatorService {
      *  @return result 計算結果
      */
 	public double mul(double firstNum , double secondNum) {
-
 		// 結果格納用変数
 		double result = firstNum * secondNum;
 		return result;
-
 	}
 
 	/**
@@ -179,10 +173,8 @@ public class CalculatorService {
      *  @return result 計算結果
      */
 	public double div(double firstNum , double secondNum) {
-
 		// 結果格納用変数
 		double result = firstNum / secondNum;
 		return result;
-
 	}
 }
